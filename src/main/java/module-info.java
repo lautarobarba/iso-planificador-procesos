@@ -1,6 +1,7 @@
 module com.example.isoplanificadorprocesos {
     requires javafx.controls;
     requires javafx.fxml;
+    requires MaterialFX;
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
