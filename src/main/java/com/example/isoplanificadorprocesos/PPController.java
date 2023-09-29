@@ -3,7 +3,10 @@ package com.example.isoplanificadorprocesos;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class Planificador {
+public class PPController {
+
+    private PPService pp_service = new PPService();
+
     @FXML
     private Label welcomeText;
 
@@ -13,6 +16,7 @@ public class Planificador {
     }
     @FXML
     protected void onMaterialTestButtonClick() {
-        welcomeText.setText("MaterialFX Clickeado!");
+        welcomeText.setText("Cargando procesos");
+        pp_service.loadProcesos();
     }
 }

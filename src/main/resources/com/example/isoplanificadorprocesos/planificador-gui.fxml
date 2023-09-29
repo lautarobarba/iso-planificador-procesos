@@ -13,7 +13,7 @@
         spacing="20.0"
         xmlns="http://javafx.com/javafx/20.0.1"
         xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="com.example.isoplanificadorprocesos.Planificador"
+        fx:controller="com.example.isoplanificadorprocesos.PPController"
         stylesheets="@planificador-gui.css"
 >
   <padding>
