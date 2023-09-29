@@ -1,0 +1,74 @@
+/* COLORES */
+* {
+	-mfx-blue: #2196f3;
+	-mfx-charcoal: #445055;
+	-mfx-green: #4caf50;
+	-mfx-onyx: #353935;
+	-mfx-orange: #ff9800;
+	-mfx-purple: #7a0ed9;
+	-mfx-red: #EF6E6B;
+	-mfx-yellow: #FFEA00;
+
+	-mfx-text-he: rgba(0, 0, 0, 0.87); /* High Emphasis */
+	-mfx-text-me: rgba(0, 0, 0, 0.60); /* Medium Emphasis*/
+	-mfx-text-disabled: rgba(0, 0, 0, 0.38); /* Disabled */
+
+	-common-gradient: linear-gradient(to right bottom, #c4008b, #d00085, #dc007f, #e60b79, #ef1872, #f5276b, #fa3564, #fe415e, #ff5158, #ff5f52, #ff6c4e, #ff794b);
+	-secondary-gradient: linear-gradient(to right bottom, #1ec400, #00bd3a, #00b654, #00ae67, #00a574, #00a280, #009e8a, #009a91, #009b9d, #009ba8, #009bb2, #009abb);
+}
+
+/* BASE */
+.header-label {
+	-fx-font-family: 'Visby Round CF Bold';
+	-fx-font-size: 14;
+	-fx-text-fill: -mfx-text-he;
+}
+
+.header-label .text {
+	-fx-font-smoothing-type: lcd;
+}
+
+.sub-header-label {
+	-fx-font-family: 'Visby Round CF Demi Bold';
+	-fx-text-fill: -mfx-text-he;
+}
+
+.sub-header-label .text {
+	-fx-font-smoothing-type: lcd;
+}
+
+.grid-pane {
+	-fx-background-color: transparent;
+}
+
+.grid-background {
+	-fx-background-color: white;
+	-fx-background-radius: 10;
+	-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.12, -1.0, 2.0);
+}
+
+/* CUSTOM STYLES */
+.primary-button {
+	-fx-background-color: -mfx-blue;
+	-fx-text-fill: white;
+}
+
+.secondary-button {
+	-fx-background-color: -mfx-charcoal;
+	-fx-text-fill: white;
+}
+
+.success-button {
+	-fx-background-color: -mfx-green;
+	-fx-text-fill: white;
+}
+
+.warning-button {
+	-fx-background-color: -mfx-orange;
+	-fx-text-fill: black;
+}
+
+.error-button {
+	-fx-background-color: -mfx-red;
+	-fx-text-fill: black;
+}
