@@ -18,6 +18,10 @@
 }
 
 /* BASE */
+.main-container {
+    -fx-background-color: linear-gradient(to right, #1cd8d2, #93edc7);
+}
+
 .header-label {
 	-fx-font-family: 'Visby Round CF Bold';
 	-fx-font-size: 14;

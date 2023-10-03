@@ -1,31 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXListView?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox
-        alignment="CENTER"
-        prefHeight="284.0"
-        prefWidth="243.0"
-        spacing="20.0"
-        xmlns="http://javafx.com/javafx/20.0.1"
-        xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="com.example.isoplanificadorprocesos.PPController"
-        stylesheets="@planificador-gui.css"
->
+<VBox alignment="CENTER" prefHeight="768.0" prefWidth="1360.0" spacing="20.0" styleClass="main-container" stylesheets="@planificador-gui.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.isoplanificadorprocesos.PPController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
+   <HBox prefHeight="31.0" prefWidth="1320.0">
+      <children>
+         <Label fx:id="labelListaProcesos" prefHeight="25.0" prefWidth="1198.0" text="Lista de procesos" />
+         <MFXButton fx:id="btnCargarProcesos" onAction="#onBtnCargarProcesosClick" prefHeight="26.0" prefWidth="140.0" styleClass="primary-button" text="Cargar procesos" />
+      </children>
+   </HBox>
 
-    <Label fx:id="welcomeText" text="Click Somewhere" />
-    <Button onAction="#onHelloButtonClick" text="Hello!" />
-    <MFXButton
-        fx:id="MaterialTestButton"
-        buttonType="RAISED"
-        styleClass="primary-button"
-        onAction="#onMaterialTestButtonClick"
-    />
+   <HBox prefHeight="748.0" prefWidth="1320.0">
+      <children>
+         <MFXListView fx:id="listProcesos" prefHeight="304.0" prefWidth="1320.0" />
+      </children></HBox>
 </VBox>
