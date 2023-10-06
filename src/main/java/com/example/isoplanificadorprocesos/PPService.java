@@ -21,7 +21,15 @@ public class PPService {
                 currentLine = scanner.next();
                 if(!currentLine.contains("#")) {
                     String[] tokens = currentLine.split(";");
-                    Proceso p_aux = new Proceso(tokens[0].trim(), Integer.parseInt(tokens[1].trim()));
+                    Proceso p_aux = new Proceso(
+                            Proceso.getNextID(),
+                            tokens[0].trim(),
+                            Integer.parseInt(tokens[1].trim()),
+                            Integer.parseInt(tokens[2].trim()),
+                            Integer.parseInt(tokens[3].trim()),
+                            Integer.parseInt(tokens[4].trim()),
+                            Integer.parseInt(tokens[5].trim())
+                    );
                     System.out.println(p_aux);
                     this.procesos.add(p_aux);
                 }
