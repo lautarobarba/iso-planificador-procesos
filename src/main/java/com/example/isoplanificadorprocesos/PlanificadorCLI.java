@@ -8,7 +8,7 @@ public class PlanificadorCLI {
     private static void printMenu() {
         System.out.println("=> MENU");
         System.out.println("1) - Ejecutar utilizando FCFS (First Come First Served).");
-        System.out.println("2) - Ejecutar utilizando PE (Prioridad Externa)");
+        System.out.println("2) - Ejecutar utilizando PE (Prioridad Externa).");
         System.out.println("3) - Ejecutar utilizando RR (Round-Robin).");
         System.out.println("4) - Ejecutar utilizando SPN (Shortest Process Next).");
         System.out.println("5) - Ejecutar utilizando SRTN (Shortest Remaining Time Next).");
@@ -31,6 +31,7 @@ public class PlanificadorCLI {
                System.out.println("Opcion seleccionada Inválida.");
            } else {
                System.out.println("Opcion seleccionada: " + optionSelected);
+               pp_service.resetResultados();
                switch (optionSelected) {
                    case 1:
                        pp_service.ejecutarFCFS();

@@ -4,6 +4,7 @@ public class Proceso {
 
     static int serial = 0;
 
+    // Atributos
     private Number id;
     private String nombre;
     private Number tiempo_arribo;
@@ -11,6 +12,11 @@ public class Proceso {
     private Number duracion_rafaga_cpu;
     private Number duracion_rafaga_io;
     private Number prioridad;
+
+    // Estado (Resultados) del proceso finalizado
+    private int tiempo_retorno = 0;
+    private int tiempo_retorno_normalizado = 0;
+    private int tiempo_en_estado_listo = 0;
 
     public Proceso(Number id, String nombre, Number tiempo_arribo, Number cantidad_rafagas, Number duracion_rafaga_cpu, Number duracion_rafaga_io, Number prioridad){
         this.id = id;
@@ -31,9 +37,17 @@ public class Proceso {
         return this.nombre;
     }
 
+    public void limpiarEstado(){
+        // Limpio Estado/Resultados anteriores
+        this.tiempo_retorno = 0;
+        this.tiempo_retorno_normalizado = 0;
+        this.tiempo_en_estado_listo = 0;
+    }
+
     public Number getId() {
         return this.id;
     }
+
     public String getNombre() {
         return this.nombre;
     }

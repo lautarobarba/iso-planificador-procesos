@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
-<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -13,22 +13,29 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="650.0" prefWidth="1250.0" spacing="20.0" styleClass="main-container" stylesheets="@planificador-gui.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.isoplanificadorprocesos.PPController">
+<VBox alignment="CENTER" fillWidth="false" prefHeight="650.0" prefWidth="1250.0" spacing="5.0" styleClass="main-container" stylesheets="@planificador-gui.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.isoplanificadorprocesos.PPController">
   <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
   </padding>
-   <HBox prefHeight="31.0" prefWidth="1320.0">
+   <HBox prefHeight="0.0" prefWidth="1210.0">
       <children>
-         <Label fx:id="labelListaProcesos" prefHeight="25.0" prefWidth="1198.0" text="Lista de procesos" textFill="WHITE">
+         <Label fx:id="labelListaProcesos" prefHeight="1.0" prefWidth="768.0" text="Lista de procesos" textFill="WHITE">
             <font>
                <Font name="System Bold" size="14.0" />
             </font></Label>
+         <Label fx:id="labelPoliticaEjecucion" alignment="CENTER_RIGHT" prefHeight="1.0" prefWidth="768.0" text="Política de ejecución" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <ComboBox fx:id="comboPoliticasEjecucion" prefHeight="38.0" prefWidth="212.0" promptText="Seleccione la política de ejecución..." />
+         <MFXButton fx:id="btnEjecutarPlanificador" prefHeight="90.0" prefWidth="200.0" text="Ejecutar planificador" />
       </children>
    </HBox>
 
-   <HBox prefHeight="214.0" prefWidth="1320.0">
+   <HBox prefHeight="145.0" prefWidth="1210.0">
       <children>
-         <TableView fx:id="tableListaProcesos" prefHeight="357.0" prefWidth="1466.0">
+         <TableView fx:id="tableListaProcesos" prefHeight="150.0" prefWidth="1210.0">
            <columns>
              <TableColumn fx:id="columnID" editable="false" prefWidth="50.0" resizable="false" sortable="false" text="ID" />
              <TableColumn fx:id="columnNombre" editable="false" minWidth="0.0" prefWidth="200.0" resizable="false" sortable="false" text="Nombre" />
@@ -40,14 +47,37 @@
            </columns>
          </TableView>
       </children></HBox>
-   <HBox prefHeight="71.0" prefWidth="1320.0">
+   <HBox prefHeight="145.0" prefWidth="1210.0">
       <children>
-         <Label prefHeight="16.0" prefWidth="314.0" text="Label" />
-         <MFXComboBox prefHeight="42.0" prefWidth="333.0" text="opc1" />
-         <MFXButton prefHeight="26.0" prefWidth="234.0" text="Ejecutar planificador" />
+         <TableView fx:id="tableListaProcesos1" prefHeight="94.0" prefWidth="1210.0">
+            <columns>
+               <TableColumn fx:id="columnID1" editable="false" prefWidth="50.0" resizable="false" sortable="false" text="ID" />
+               <TableColumn fx:id="columnNombre1" editable="false" minWidth="0.0" prefWidth="200.0" resizable="false" sortable="false" text="Nombre" />
+               <TableColumn fx:id="columnTiempoArribo1" editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Tiempo de arribo" />
+               <TableColumn fx:id="columnCantidadRafagas1" editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Cantidad de ráfagas" />
+               <TableColumn fx:id="columnDuracionRafagaCPU1" editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Duración ráfaga CPU" />
+               <TableColumn fx:id="columnDuracionRafagaIO1" editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Duración ráfaga I/O" />
+               <TableColumn fx:id="columnPrioridad1" editable="false" prefWidth="170.0" resizable="false" sortable="false" text="Prioridad" />
+            </columns>
+         </TableView>
       </children>
    </HBox>
-   <HBox prefHeight="367.0" prefWidth="1320.0">
+   <HBox prefHeight="60.0" prefWidth="1210.0">
+      <children>
+         <TableView fx:id="tableListaProcesos2" prefHeight="130.0" prefWidth="1210.0">
+            <columns>
+               <TableColumn fx:id="columnID2" editable="false" prefWidth="50.0" resizable="false" sortable="false" text="ID" />
+               <TableColumn fx:id="columnNombre2" editable="false" minWidth="0.0" prefWidth="200.0" resizable="false" sortable="false" text="Nombre" />
+               <TableColumn fx:id="columnTiempoArribo2" editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Tiempo de arribo" />
+               <TableColumn fx:id="columnCantidadRafagas2" editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Cantidad de ráfagas" />
+               <TableColumn fx:id="columnDuracionRafagaCPU2" editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Duración ráfaga CPU" />
+               <TableColumn fx:id="columnDuracionRafagaIO2" editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Duración ráfaga I/O" />
+               <TableColumn fx:id="columnPrioridad2" editable="false" prefWidth="170.0" resizable="false" sortable="false" text="Prioridad" />
+            </columns>
+         </TableView>
+      </children>
+   </HBox>
+   <HBox prefHeight="203.0" prefWidth="1210.0">
       <children>
          <StackPane prefHeight="319.0" prefWidth="1320.0">
             <children>

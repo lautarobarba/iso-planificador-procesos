@@ -9,6 +9,22 @@ import java.util.Scanner;
 
 public class PPService {
     private ArrayList<Proceso> procesos = new ArrayList<>();
+
+    /* - Tiempo que utiliza el sistema operativo para aceptar los nuevos procesos (TIP) */
+    private int tip;
+
+    /* - Tiempo que utiliza el sistema operativo para terminar los procesos (TFP) */
+    private int tfp;
+
+    /* - Tiempo de conmutación entre procesos (TCP) */
+    private int tcp;
+
+    /* - Quantum (si fuera necesario) */
+    private int quantum;
+
+    // Estado (Resultados) de la tanda
+    private int tiempo_retorno_tanda = 0;
+    private int tiempo_medio_retorno_tanda = 0;
     public void loadProcesos(){
         System.out.println("=> Cargando procesos");
 
@@ -44,6 +60,23 @@ public class PPService {
         return this.procesos;
     }
 
+    public void resetResultados(){
+        // Inputs
+        this.tip = 0;
+        this.tfp = 0;
+        this.tcp = 0;
+        this.quantum = 0;
+
+        // Output (Resultados) de la tanda
+        this.tiempo_retorno_tanda = 0;
+        this.tiempo_medio_retorno_tanda = 0;
+
+        // Output (Resultados) de los procesos
+        for(Proceso proc_aux :this.procesos) {
+            proc_aux.limpiarEstado();
+        }
+    }
+
     public void ejecutarFCFS(){
         System.out.println("Ejecutando FCFS (First Come First Served)...");
     }
@@ -54,6 +87,7 @@ public class PPService {
 
     public void ejecutarRR(){
         System.out.println("Ejecutando RR (Round-Robin)...");
+        // CONTROLAR QUE EL QUANTUM SEA MAYOR A CERO O SINO TIRAR ERROR
     }
 
     public void ejecutarSPN(){
