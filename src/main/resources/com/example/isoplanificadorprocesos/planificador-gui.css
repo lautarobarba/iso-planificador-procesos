@@ -19,7 +19,7 @@
 
 /* BASE */
 .main-container {
-    -fx-background-color: linear-gradient(to right, #1cd8d2, #93edc7);
+    -fx-background-color: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
 }
 
 .header-label {

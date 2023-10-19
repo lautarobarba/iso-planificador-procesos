@@ -43,4 +43,24 @@ public class PPService {
     public ArrayList<Proceso> getProcesos() {
         return this.procesos;
     }
+
+    public void ejecutarFCFS(){
+        System.out.println("Ejecutando FCFS (First Come First Served)...");
+    }
+
+    public void ejecutarPE(){
+        System.out.println("Ejecutando PE (Prioridad Externa)...");
+    }
+
+    public void ejecutarRR(){
+        System.out.println("Ejecutando RR (Round-Robin)...");
+    }
+
+    public void ejecutarSPN(){
+        System.out.println("Ejecutando SPN (Shortest Process Next)...");
+    }
+
+    public void ejecutarSRTN(){
+        System.out.println("Ejecutando SRTN (Shortest Remaining Time Next)...");
+    }
 }

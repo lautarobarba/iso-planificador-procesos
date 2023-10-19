@@ -11,15 +11,18 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="768.0" prefWidth="1360.0" spacing="20.0" styleClass="main-container" stylesheets="@planificador-gui.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.isoplanificadorprocesos.PPController">
+<VBox alignment="CENTER" prefHeight="650.0" prefWidth="1250.0" spacing="20.0" styleClass="main-container" stylesheets="@planificador-gui.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.isoplanificadorprocesos.PPController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
    <HBox prefHeight="31.0" prefWidth="1320.0">
       <children>
-         <Label fx:id="labelListaProcesos" prefHeight="25.0" prefWidth="1198.0" text="Lista de procesos" />
-         <MFXButton fx:id="btnNuevoProceso" onAction="#onBtnNuevoProcesosClick" prefHeight="26.0" prefWidth="140.0" styleClass="primary-button" text="Nuevo procesos" />
+         <Label fx:id="labelListaProcesos" prefHeight="25.0" prefWidth="1198.0" text="Lista de procesos" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font></Label>
       </children>
    </HBox>
 
@@ -29,10 +32,10 @@
            <columns>
              <TableColumn fx:id="columnID" editable="false" prefWidth="50.0" resizable="false" sortable="false" text="ID" />
              <TableColumn fx:id="columnNombre" editable="false" minWidth="0.0" prefWidth="200.0" resizable="false" sortable="false" text="Nombre" />
-               <TableColumn fx:id="columnTiempoArribo" editable="false" prefWidth="220.0" resizable="false" sortable="false" text="Tiempo de arribo" />
-               <TableColumn fx:id="columnCantidadRafagas" editable="false" prefWidth="220.0" resizable="false" sortable="false" text="Cantidad de ráfagas" />
-               <TableColumn fx:id="columnDuracionRafagaCPU" editable="false" prefWidth="220.0" resizable="false" sortable="false" text="Duración ráfaga CPU" />
-               <TableColumn fx:id="columnDuracionRafagaIO" editable="false" prefWidth="220.0" resizable="false" sortable="false" text="Duración ráfaga I/O" />
+               <TableColumn fx:id="columnTiempoArribo" editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Tiempo de arribo" />
+               <TableColumn fx:id="columnCantidadRafagas" editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Cantidad de ráfagas" />
+               <TableColumn fx:id="columnDuracionRafagaCPU" editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Duración ráfaga CPU" />
+               <TableColumn fx:id="columnDuracionRafagaIO" editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Duración ráfaga I/O" />
                <TableColumn fx:id="columnPrioridad" editable="false" prefWidth="170.0" resizable="false" sortable="false" text="Prioridad" />
            </columns>
          </TableView>
